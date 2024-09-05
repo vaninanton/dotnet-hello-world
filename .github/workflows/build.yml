@@ -15,11 +15,11 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
       - name: Build
-        run: dotnet build
-      - name: Run
-        run: dotnet run
-      # - name: ls -lah
-      #   run: ls -lah bin/Release/net8.0/win-x64/publish/
+        run: dotnet publish -r win-x64
+      # - name: Run
+      #   run: dotnet run
+      - name: ls -lah
+        run: ls -lah bin/Release/net8.0/win-x64/publish/
       - name: Upload dotnet test results
         uses: actions/upload-artifact@v4
         with:
