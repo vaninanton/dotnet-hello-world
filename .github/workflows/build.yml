@@ -11,13 +11,15 @@ jobs:
       - name: Setup dotnet
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '8.0.x'
       - name: Install dependencies
         run: dotnet restore
       - name: Build
         run: dotnet build
+      - name: Run
+        run: dotnet run
       - name: Build
-        run: ls -lah
+        run: ls -lah bin/Debug/net8.0
 
       # - name: Test with the dotnet CLI
       #   run: dotnet test
