@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: result
-          path: bin/Release/net8.0/win-x64/publish/dotnet-hello-world.exe
+          path: bin/Release/net8.0/win-x64/publish/
 
       # - name: Test with the dotnet CLI
       #   run: dotnet test
